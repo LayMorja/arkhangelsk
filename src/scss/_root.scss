@@ -1,10 +1,15 @@
 // Подключение общих CSS-переменных
 :root {
-	//* Переменные
-	--header-height: 0;
+  //* Переменные
+  --header-height: 0;
 
-	//* Цвета
-	--clr-white: #fff;
-	--clr-black: #000;
-	--clr-accent: #d33838;
+  //* Цвета
+  --clr-white: #fff;
+  --clr-black: #42454a;
+  --clr-blue: #246ab3;
+  --clr-blue-bg: #6e8bc4;
+  --clr-accent: #d33838;
+  --clr-orange: #de9561;
+  --clr-grey-blue: #f0f2f6;
+  --clr-green: #29ce43;
 }
