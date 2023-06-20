@@ -23,3 +23,20 @@
 ._blue {
   color: var(--clr-blue);
 }
+
+.title {
+  font-size: rem(30);
+  line-height: 1.18;
+  //== 440px ==//
+  @media (min-width: $mb-s) {
+    font-size: rem(34);
+  }
+  //== 992px ==//
+  @media (min-width: $tb) {
+    font-size: rem(38);
+  }
+  //== 1024px ==//
+  @media (min-width: $note-s) {
+    font-size: rem(40);
+  }
+}

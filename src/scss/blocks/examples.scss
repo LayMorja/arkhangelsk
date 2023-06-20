@@ -1,0 +1,117 @@
+.page {
+  &__examples {
+  }
+}
+.examples {
+  &__container {
+  }
+
+  &__header-line {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  &__header-line {
+    margin-bottom: rem(20);
+  }
+
+  &__title {
+    //== 992px ==//
+    @media (max-width: $tb) {
+      font-size: rem(36);
+    }
+  }
+  &__title:not(:last-child) {
+    margin-right: rem(30);
+  }
+
+  &__navigation {
+    @extend %fl-r-ct;
+  }
+
+  &__arrow {
+    @extend %fl-a-ct;
+    flex: 0 0 rem(36);
+    width: rem(36);
+    height: rem(36);
+    padding: rem(10);
+    border: 1.5px solid #e9eaef;
+    box-shadow: 0px 4px 80px rgba(221, 222, 245, 0.7);
+    border-radius: 50%;
+    //== 768px ==//
+    @media (min-width: $mb) {
+      flex: 0 0 rem(48);
+      width: rem(48);
+      height: rem(48);
+      padding: rem(15);
+    }
+    //== 992px ==//
+    @media (min-width: $tb) {
+      flex: 0 0 rem(64);
+      width: rem(64);
+      height: rem(64);
+      padding: rem(20);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      flex: 0 0 rem(70);
+      width: rem(70);
+      height: rem(70);
+    }
+  }
+  &__arrow:not(:last-child) {
+    margin-right: rem(15);
+  }
+  &__arrow img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+
+  &__arrow-prev {
+  }
+
+  &__arrow-next {
+  }
+
+  &__slider {
+    @extend %ml;
+
+    .slick-slide:not(:last-child) {
+      margin-right: rem(15);
+      //== 768px ==//
+      @media (min-width: $mb) {
+        margin-right: rem(20);
+      }
+      //== 992px ==//
+      @media (min-width: $tb) {
+        margin-right: rem(30);
+      }
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        margin-right: rem(40);
+      }
+    }
+    .slick-slide:focus {
+      outline: none;
+    }
+  }
+
+  &__img {
+    width: rem(270);
+    height: rem(367);
+    object-fit: cover;
+    border-radius: rem(20);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      width: rem(350);
+      height: rem(447);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      width: rem(400);
+      height: rem(539);
+    }
+  }
+}
