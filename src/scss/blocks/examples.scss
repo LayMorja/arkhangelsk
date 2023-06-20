@@ -1,5 +1,10 @@
 .page {
-  &__examples {
+  &__examples:not(:last-child) {
+    margin-bottom: rem(80);
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-bottom: rem(70);
+    }
   }
 }
 .examples {
