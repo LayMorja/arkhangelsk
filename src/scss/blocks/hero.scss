@@ -1,5 +1,118 @@
+.page {
+  &__hero {
+    margin-top: rem(70);
+  }
+}
 .hero {
-   &__container {
-      
-   }
+  &__container {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      display: flex;
+      margin-right: 0;
+    }
+  }
+
+  &__content {
+  }
+
+  &__title {
+    font-size: rem(40);
+    line-height: 98%;
+  }
+  &__title:not(:last-child) {
+    margin-bottom: rem(15);
+  }
+
+  &__descr {
+    font-weight: 300;
+    font-size: rem(24);
+    line-height: 115%;
+    //== 370px ==//
+    @media (min-width: $mb-xs) {
+      line-height: 123%;
+    }
+  }
+  &__descr span {
+    font-weight: 500;
+    color: var(--clr-blue);
+  }
+  &__descr:not(:last-child) {
+    margin-bottom: rem(30);
+  }
+
+  &__btn {
+    width: 100%;
+    position: relative;
+    z-index: 5;
+    //== 440px ==//
+    @media (min-width: $mb-s) {
+      width: auto;
+    }
+  }
+
+  &__image {
+    height: rem(365);
+    margin-right: rem(-20);
+    margin-left: rem(-20);
+    margin-top: rem(-60);
+    @extend %ibg;
+    //== 370px ==//
+    @media (min-width: $mb-xs) {
+      margin-top: rem(-40);
+    }
+    //== 768px ==//
+    @media (min-width: $mb) {
+      flex: 1 1 auto;
+      margin-top: 0;
+      margin-left: 0;
+      margin-right: 0;
+    }
+    img {
+      object-position: bottom;
+    }
+  }
+
+  &__guarantee {
+    position: absolute;
+    right: rem(33);
+    bottom: rem(40);
+    @extend %fl-c;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: rem(100);
+    height: rem(133);
+    @extend %bg-con;
+    background-image: url('@img/other_icons/garantuee.svg');
+    filter: drop-shadow(0px 0px 20px rgba(53, 53, 53, 0.3));
+
+    &-title {
+      font-weight: 400;
+      font-size: rem(12);
+      line-height: 115%;
+      color: var(--clr-white);
+      &:not(:last-child) {
+        margin-bottom: rem(5);
+      }
+    }
+    &-counter {
+      @extend %fl-c;
+      font-weight: 700;
+      font-size: rem(47);
+      background: linear-gradient(
+          180deg,
+          rgba(220, 216, 201, 0.77) 0%,
+          rgba(160, 155, 134, 0.0693) 100%
+        ),
+        #ffffff;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      text-fill-color: transparent;
+      text-shadow: 0px 2.66667px 6.66667px rgba(19, 19, 19, 0.25);
+    }
+    &-counter span {
+      font-size: rem(17);
+    }
+  }
 }

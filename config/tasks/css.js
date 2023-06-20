@@ -1,6 +1,6 @@
 import gulpSass from 'gulp-sass';
-// import dartSass from 'sass';
-import * as sass from 'sass';
+import dartSass from 'sass';
+// import * as sass from 'sass';
 const sass = gulpSass(dartSass);
 
 import cleanCss from 'gulp-clean-css';

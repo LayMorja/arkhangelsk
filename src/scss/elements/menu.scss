@@ -1,6 +1,15 @@
 .menu {
+  //== 992px ==//
+  @media (min-width: $tb) {
+    align-self: flex-end;
+    margin-bottom: rem(10);
+  }
   &__phone {
     margin-top: rem(30);
+    //== 768px ==//
+    @media (min-width: $tb) {
+      display: none;
+    }
   }
   &__body {
     position: fixed;
@@ -10,6 +19,7 @@
     display: flex;
     flex-direction: column;
     width: 85%;
+    max-width: rem(350);
     height: 100%;
     background-color: var(--clr-white);
     box-shadow: -4px 0px 12px rgba(0, 0, 0, 0.15);
@@ -27,25 +37,69 @@
     }
     > ul {
       flex: 1 1 auto;
+      //== 768px ==//
+      @media (min-width: $tb) {
+        display: flex;
+        align-items: flex-end;
+      }
     }
     > ul > li:not(:last-child) {
       margin-bottom: rem(30);
+      //== 768px ==//
+      @media (min-width: $tb) {
+        margin-bottom: 0;
+        margin-right: rem(20);
+      }
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        margin-right: rem(40);
+      }
+      //== 1360px ==//
+      @media (min-width: $note-l) {
+        margin-right: rem(60);
+      }
     }
-    > ul > li:hover ul {
-      // transform: translateY(0);
-      // opacity: 1;
-      // visibility: visible;
-      // pointer-events: all;
+    > ul > li {
+      //== 992px ==//
+      @media (min-width: $tb) {
+        text-align: center;
+      }
     }
     > ul > li > a {
+      display: block;
       line-height: 125%;
       text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+      transition: transform 0.25s ease-in-out;
+      &:hover {
+        transform: translateY(rem(-1));
+      }
+      //== 992px ==//
+      @media (min-width: $tb) {
+        font-size: rem(16);
+      }
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        font-size: rem(20);
+      }
+      //== 1360px ==//
+      @media (min-width: $note-l) {
+        font-size: rem(24);
+      }
     }
-    > ul > li ul {
-    }
-    > ul > li ul li {
-    }
-    > ul > li ul li a {
+    //== 768px ==//
+    @media (min-width: $tb) {
+      position: static;
+      width: auto;
+      max-width: none;
+      height: auto;
+      box-shadow: none;
+      padding: 0;
+      background-color: transparent;
+      transform: translateX(0);
+      visibility: visible;
+      pointer-events: all;
+      opacity: 1;
+      margin: 0 rem(20);
     }
   }
 }
@@ -57,7 +111,7 @@
   @media (min-width: $mb-s) {
     order: 3;
   }
-  @media (max-width: $mb) {
+  @media (max-width: $tb) {
     display: block;
     position: relative;
     width: rem(22);
