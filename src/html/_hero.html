@@ -23,9 +23,9 @@
       </div>
       <div class="hero__image">
         <picture>
-          <source media="(max-width: 992px)" srcset="@img/hero/image-mobile.png" />
-          <source srcset="@img/hero/image.png" media="(min-width: 992px)" />
-          <img src="@img/hero/image.png" alt="Изображение оконных рам" />
+          <source media="(max-width: 1200px)" srcset="@img/hero/image-mobile.png" />
+          <source srcset="@img/hero/image.png" media="(min-width: 1200px)" />
+          <img src="@img/hero/image-mobile.png" alt="Изображение оконных рам" />
         </picture>
         <div class="hero__guarantee">
           <span class="hero__guarantee-title">С гарантией</span>
@@ -33,5 +33,6 @@
         </div>
       </div>
     </div>
+    @@include("./components/_menu-list.html")
   </div>
 </section>

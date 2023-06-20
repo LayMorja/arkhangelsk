@@ -1,16 +1,26 @@
 .page {
   &__hero {
     margin-top: rem(170);
+    //== 440px ==//
+    @media (min-width: $mb-s) {
+      margin-top: rem(120);
+    }
+    //== 992px ==//
+    @media (min-width: $mb) {
+      margin-top: rem(100);
+    }
     //== 992px ==//
     @media (min-width: $tb) {
       margin-top: rem(30);
     }
   }
+  &__hero:not(:last-child) {
+    margin-bottom: rem(80);
+  }
 }
 .hero {
   &__upper-link {
     display: none;
-    @extend %mr;
     @extend %ff-500-24;
     margin-bottom: rem(5);
     //== 992px ==//
@@ -20,7 +30,6 @@
     }
   }
   &__container {
-    @extend %ml;
     //== 768px ==//
     @media (min-width: $mb) {
       margin-right: 0;
@@ -28,6 +37,7 @@
     }
   }
   &__body {
+    @extend %ml;
     //== 768px ==//
     @media (min-width: $mb) {
       display: flex;
@@ -125,18 +135,22 @@
     }
     //== 992px ==//
     @media (min-width: $tb) {
-      height: rem(485);
+      height: rem(425);
     }
-    //== 1024px ==//
-    @media (min-width: $note-s) {
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      height: rem(610);
       margin-left: rem(-120);
     }
     img {
       object-position: bottom;
       z-index: -1;
-      //== 768px ==//
-      @media (min-width: $tb) {
-        object-position: center;
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        top: rem(-60);
+      }
+      @media (min-width: em(1439.98)) {
+        top: 0;
       }
     }
   }
@@ -198,6 +212,72 @@
       &-counter span {
         font-size: rem(26);
       }
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      bottom: rem(160);
+    }
+  }
+
+  &__menu {
+    position: relative;
+    z-index: 2;
+    display: none;
+    padding-left: 0;
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-top: rem(30);
+      display: block;
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: rem(-100);
+    }
+    //== 1440px ==//
+    @media (min-width: $note-xl) {
+      margin-top: rem(-40);
+    }
+  }
+
+  &__list {
+    max-width: 95%;
+    margin: 0 auto;
+    @extend %fl-r-ctb;
+  }
+
+  &__item:not(:last-child) {
+    margin-right: rem(30);
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-right: rem(50);
+    }
+    //== 1440px ==//
+    @media (min-width: $note-xl) {
+      margin-right: rem(60);
+    }
+  }
+
+  &__link {
+    display: block;
+    font-weight: 500;
+    font-size: rem(24);
+    line-height: 125%;
+    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    transition: transform 0.25s ease-in-out;
+    &:hover {
+      transform: translateY(rem(-1));
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(28);
+    }
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      font-size: rem(32);
+    }
+    //== 1440px ==//
+    @media (min-width: $note-xl) {
+      font-size: rem(36);
     }
   }
 }
