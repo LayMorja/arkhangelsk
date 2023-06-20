@@ -1,21 +1,36 @@
 <section class="page__hero hero">
-  <div class="hero__container container">
-    <div class="hero__content">
-      <h1 class="hero__title main-title">
-        <span class="_blue">Пластиковые окна</span><br />
-        в Архангельске
-      </h1>
-      <p class="hero__descr">
-        Для города и дачи, в наличие <br />
-        <span>под ключ</span>
-      </p>
-      <button class="hero__btn btn"><span>Рассчитать стоимость</span></button>
+  <div class="hero__container">
+    <div class="hero__upper-link container">
+      <a href="tel:+78182432246">+7 (8182) 43-22-46</a>
     </div>
-    <div class="hero__image">
-      <img src="@img/hero/image.png" alt="Изображение оконных рам" />
-      <div class="hero__guarantee">
-        <span class="hero__guarantee-title">С гарантией</span>
-        <span class="hero__guarantee-counter">5 <span>лет</span></span>
+    <div class="hero__body">
+      <div class="hero__content">
+        <a href="javascript:void(0);" class="hero__logo logo">
+          <img
+            src="@img/logo.png"
+            alt="Логотип компании Домино Плюс: Качество. Стабильность. Цена."
+            class="logo__image" />
+        </a>
+        <h1 class="hero__title main-title">
+          <span class="_blue">Пластиковые окна</span><br />
+          в Архангельске
+        </h1>
+        <p class="hero__descr">
+          Для города и дачи, в наличие <br />
+          <span>под ключ</span>
+        </p>
+        <button class="hero__btn btn"><span>Рассчитать стоимость</span></button>
+      </div>
+      <div class="hero__image">
+        <picture>
+          <source media="(max-width: 992px)" srcset="@img/hero/image-mobile.png" />
+          <source srcset="@img/hero/image.png" media="(min-width: 992px)" />
+          <img src="@img/hero/image.png" alt="Изображение оконных рам" />
+        </picture>
+        <div class="hero__guarantee">
+          <span class="hero__guarantee-title">С гарантией</span>
+          <span class="hero__guarantee-counter">5 <span>лет</span></span>
+        </div>
       </div>
     </div>
   </div>

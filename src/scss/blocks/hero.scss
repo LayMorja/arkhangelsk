@@ -1,23 +1,56 @@
 .page {
   &__hero {
-    margin-top: rem(70);
+    margin-top: rem(170);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-top: rem(30);
+    }
   }
 }
 .hero {
+  &__upper-link {
+    display: none;
+    @extend %mr;
+    @extend %ff-500-24;
+    margin-bottom: rem(5);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
   &__container {
+    @extend %ml;
+    //== 768px ==//
+    @media (min-width: $mb) {
+      margin-right: 0;
+      padding-right: 0;
+    }
+  }
+  &__body {
     //== 768px ==//
     @media (min-width: $mb) {
       display: flex;
-      margin-right: 0;
+    }
+  }
+
+  &__logo {
+    display: none;
+    max-width: rem(300);
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+    //== 992px ==//
+    @media (min-width: $tb) {
+      display: block;
     }
   }
 
   &__content {
+    padding-right: rem(20);
   }
 
   &__title {
-    font-size: rem(40);
-    line-height: 98%;
   }
   &__title:not(:last-child) {
     margin-bottom: rem(15);
@@ -31,6 +64,18 @@
     @media (min-width: $mb-xs) {
       line-height: 123%;
     }
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(26);
+    }
+    //== 992px ==//
+    @media (min-width: $tb) {
+      font-size: rem(28);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(32);
+    }
   }
   &__descr span {
     font-weight: 500;
@@ -38,6 +83,10 @@
   }
   &__descr:not(:last-child) {
     margin-bottom: rem(30);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-bottom: rem(35);
+    }
   }
 
   &__btn {
@@ -47,6 +96,13 @@
     //== 440px ==//
     @media (min-width: $mb-s) {
       width: auto;
+    }
+    //== 768px ==//
+    @media (min-width: $mb) {
+      padding: rem(22) rem(30);
+      span {
+        font-size: rem(16);
+      }
     }
   }
 
@@ -67,8 +123,21 @@
       margin-left: 0;
       margin-right: 0;
     }
+    //== 992px ==//
+    @media (min-width: $tb) {
+      height: rem(485);
+    }
+    //== 1024px ==//
+    @media (min-width: $note-s) {
+      margin-left: rem(-120);
+    }
     img {
       object-position: bottom;
+      z-index: -1;
+      //== 768px ==//
+      @media (min-width: $tb) {
+        object-position: center;
+      }
     }
   }
 
@@ -113,6 +182,22 @@
     }
     &-counter span {
       font-size: rem(17);
+    }
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      width: rem(150);
+      height: rem(200);
+      right: rem(65);
+      &-title {
+        font-size: rem(18);
+      }
+      &-counter {
+        font-size: rem(70);
+      }
+      &-counter span {
+        font-size: rem(26);
+      }
     }
   }
 }

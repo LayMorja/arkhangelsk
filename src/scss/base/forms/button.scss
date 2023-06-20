@@ -2,6 +2,8 @@
 // Снипет (HTML): btn
 
 .btn {
+  position: relative;
+  overflow: hidden;
   display: inline-flex;
   justify-content: center;
   text-align: center;
@@ -15,8 +17,25 @@
     line-height: math.div(28, 24);
     color: var(--clr-white);
   }
+  &::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: rem(25);
+    height: 200%;
+    transform: translateX(-200%);
+    background: linear-gradient(
+      to bottom,
+      rgba(255, 255, 255, 0.1) 30%,
+      #fff 70%,
+      rgba(255, 255, 255, 0.1)
+    );
+    transition: transform 0.5s ease-in-out;
+  }
   @media (any-hover: hover) {
-    &:hover {
+    &:hover::after {
+      transform: translateX(rem(215));
     }
   }
   &._fw {

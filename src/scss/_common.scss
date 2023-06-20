@@ -2,6 +2,23 @@
   display: none;
 }
 .main-title {
+  font-size: rem(40);
+  line-height: 98%;
+  //== 768px ==//
+  @media (min-width: $mb) {
+    font-size: rem(42);
+  }
+  //== 992px ==//
+  @media (min-width: $tb) {
+    font-size: rem(46);
+  }
+  //== 1200px ==//
+  @media (min-width: $note-m) {
+    font-size: rem(52);
+  }
+  @media (min-width: $pc) {
+    font-size: rem(60);
+  }
 }
 ._blue {
   color: var(--clr-blue);
