@@ -170,19 +170,19 @@
 }
 // Адаптивный отступ с одной стороны
 %pl {
-  padding-left: max(rem(20), calc((100% - rem($containerWidth)) / 2));
+  padding-left: max(rem(20), calc((100% - rem($maxWidthContainer)) / 2));
 }
 // Адаптивный отступ с одной стороны
 %pr {
-  padding-right: max(rem(20), calc((100% - rem($containerWidth)) / 2));
+  padding-right: max(rem(20), calc((100% - rem($maxWidthContainer)) / 2));
 }
 // Адаптивный отступ с одной стороны
 %ml {
-  margin-left: max(rem(20), calc((100% - rem($containerWidth)) / 2));
+  margin-left: max(rem(20), calc((100% - rem($maxWidthContainer)) / 2));
 }
 // Адаптивный отступ с одной стороны
 %mr {
-  margin-right: max(rem(20), calc((100% - rem($containerWidth)) / 2));
+  margin-right: max(rem(20), calc((100% - rem($maxWidthContainer)) / 2));
 }
 // Подчёркивание при наведении
 %hover {

@@ -12,3 +12,11 @@ $('.examples__slider').slick({
   infinite: true,
   mobileFirst: true,
 });
+
+$('.reviews__slider').slick({
+  slidesToShow: 1,
+  nextArrow: '.reviews__arrow-next',
+  prevArrow: '.reviews__arrow-prev',
+  dots: false,
+  infinite: true,
+});
