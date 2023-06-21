@@ -1,0 +1,122 @@
+.page {
+  &__works {
+  }
+}
+.works {
+  &__container {
+  }
+
+  &__title {
+    @extend %ml;
+    &:not(:last-child) {
+      margin-bottom: rem(40);
+    }
+  }
+
+  &__slider-body {
+    @extend %ml;
+    padding: rem(10);
+    background-color: var(--clr-white);
+    box-shadow: 0px 4px 80px rgba(221, 222, 245, 0.7);
+    border-radius: rem(12) 0 0 rem(12);
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      padding: rem(20);
+    }
+  }
+
+  &__slider {
+    position: relative;
+    .slick-arrow {
+      position: absolute;
+      top: 50%;
+      @extend %fl-a-ct;
+      right: rem(15);
+      width: rem(50);
+      height: rem(50);
+      padding: rem(10);
+      background-color: var(--clr-white);
+      border: 3px solid #e9eaef;
+      box-shadow: 0px 4px 80px rgba(221, 222, 245, 0.7);
+      border-radius: 50%;
+      transform: translateY(-50%);
+
+      //== 768px ==//
+      @media (min-width: $mb) {
+        width: rem(70);
+        height: rem(70);
+        padding: rem(20);
+      }
+
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        width: rem(100);
+        height: rem(100);
+        padding: rem(20);
+      }
+    }
+  }
+
+  &__slide {
+    &:focus {
+      outline: none;
+    }
+    width: rem(290);
+    &:not(:last-child) {
+      margin-right: rem(15);
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      width: rem(480);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      width: rem(560);
+    }
+    //== 1440px ==//
+    @media (min-width: $note-xl) {
+      width: rem(700);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+    border-radius: rem(20);
+    object-fit: cover;
+  }
+
+  &__wanted {
+    margin-top: rem(20);
+
+    //== 576px ==//
+    @media (min-width: $mb-m) {
+      text-align: right;
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      margin-top: rem(-40);
+    }
+  }
+
+  &__button {
+    width: 100%;
+    //== 576px ==//
+    @media (min-width: $mb-m) {
+      width: auto;
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      padding: rem(25) rem(100);
+      margin-right: rem(20);
+    }
+
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-right: rem(60);
+    }
+  }
+}

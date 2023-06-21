@@ -1,4 +1,27 @@
 .menu {
+  &.menu--inner .menu__body > ul {
+    //== 992px ==//
+    @media (min-width: $tb) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &.menu--inner .menu__body > ul > li {
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-top: rem(10);
+      margin-bottom: rem(5);
+    }
+
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      &:not(:last-child) {
+        margin-right: rem(20);
+      }
+    }
+  }
+
   //== 992px ==//
   @media (min-width: $tb) {
     align-self: flex-end;
