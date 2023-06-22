@@ -23,6 +23,9 @@
     display: none;
     @extend %ff-500-24;
     margin-bottom: rem(5);
+    > a {
+      margin-right: 10%;
+    }
     //== 992px ==//
     @media (min-width: $tb) {
       display: flex;
@@ -216,6 +219,16 @@
     //== 1200px ==//
     @media (min-width: $note-m) {
       bottom: rem(160);
+    }
+
+    @media (min-width: $pc) {
+      right: 20%;
+    }
+    @media (min-width: em(1999.98)) {
+      right: 25%;
+    }
+    @media (min-width: em(2399.98)) {
+      right: 35%;
     }
   }
 

@@ -1,0 +1,141 @@
+.page {
+  &__preview {
+    margin-top: rem(160);
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+    }
+
+    //== 440px ==//
+    @media (min-width: $mb-s) {
+      margin-top: rem(100);
+    }
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-top: rem(160);
+    }
+
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: rem(240);
+      &:not(:last-child) {
+        margin-bottom: rem(10);
+      }
+    }
+  }
+}
+.preview {
+  &__container {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: flex-start;
+    }
+  }
+
+  &__image {
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      margin-top: rem(-120);
+      height: rem(720);
+    }
+  }
+
+  &__img {
+    max-width: 100%;
+
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      flex: 0 0 40%;
+      margin-right: rem(40);
+    }
+  }
+
+  &__title {
+    max-width: rem(605);
+    font-size: rem(36);
+    font-weight: 500;
+    line-height: 98%;
+
+    &:not(:last-child) {
+      margin-bottom: rem(20);
+    }
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      font-size: rem(42);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(50);
+
+      &:not(:last-child) {
+        margin-bottom: rem(50);
+      }
+    }
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      font-size: rem(60);
+
+      &:not(:last-child) {
+        margin-bottom: rem(75);
+      }
+    }
+  }
+
+  &__descr {
+    max-width: rem(550);
+    font-size: rem(24);
+    line-height: 120%;
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      font-size: rem(28);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(30);
+
+      &:not(:last-child) {
+        margin-bottom: rem(45);
+      }
+    }
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      font-size: rem(34);
+
+      &:not(:last-child) {
+        margin-bottom: rem(65);
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: rem(22) rem(30);
+
+    //== 576px ==//
+    @media (min-width: $mb-m) {
+      width: auto;
+    }
+  }
+}
+._blue {
+  color: #246ab3;
+}

@@ -73,8 +73,9 @@
 
     //== 1360px ==//
     @media (min-width: $note-l) {
-      left: -20%;
-      top: 0;
+      max-width: 60%;
+      left: -30%;
+      top: -22%;
     }
   }
 
@@ -132,6 +133,16 @@
       background-image: url('@temp/profile/icon.svg');
       transform: translateY(rem(10));
       margin-right: rem(8);
+
+      //== 992px ==//
+      @media (min-width: $tb) {
+        transform: translateY(rem(12));
+      }
+
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        transform: translateY(rem(15));
+      }
     }
   }
 

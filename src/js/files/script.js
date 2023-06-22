@@ -33,8 +33,6 @@ $('.works__slider').slick({
 
 let myMap;
 function mapInit() {
-  if (!document.querySelector('#map')) return;
-
   const viewerCb = function (entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -86,11 +84,7 @@ function mapInit() {
   });
   observer.observe(document.querySelector('#map'));
 }
-mapInit();
-
 function changeMap() {
-  if (!document.querySelector('#map')) return;
-
   const arkhBlock = document.querySelector('.placement__block--arkh');
   const sevBlock = document.querySelector('.placement__block--sev');
 
@@ -100,4 +94,9 @@ function changeMap() {
   sevBlock.addEventListener('click', () => {
     myMap.setCenter([64.559205, 39.800509]);
   });
+}
+
+if (document.querySelector('#map')) {
+  mapInit();
+  changeMap();
 }

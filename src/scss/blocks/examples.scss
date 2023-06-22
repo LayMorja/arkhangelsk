@@ -81,8 +81,6 @@
   }
 
   &__slider {
-    @extend %ml;
-
     .slick-slide:not(:last-child) {
       margin-right: rem(15);
       //== 768px ==//

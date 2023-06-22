@@ -188,10 +188,10 @@
       height: auto;
 
       > * {
-        height: 100%;
+        height: 100% !important;
       }
       > * > * {
-        height: 100%;
+        height: 100% !important;
       }
     }
   }
@@ -231,7 +231,7 @@
       }
     }
     @media (min-width: em(819.98)) {
-      max-width: rem(270);
+      max-width: rem(280);
       padding: 0;
       margin-left: rem(30);
       margin-right: rem(45);
@@ -247,6 +247,11 @@
   &__links {
     @extend %fl-r-ct;
     justify-content: center;
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      justify-content: flex-start;
+    }
 
     span {
       margin-right: rem(20);
