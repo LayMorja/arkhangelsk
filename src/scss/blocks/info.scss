@@ -1,0 +1,133 @@
+.page {
+  &__info {
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+
+      //== 1440px ==//
+      @media (min-width: $note-xl) {
+        margin-bottom: rem(100);
+      }
+    }
+  }
+}
+.info {
+  &__container {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      display: flex;
+    }
+  }
+
+  &__image {
+    border-radius: 20px;
+    border: 5px solid #e9eaef;
+    background-color: #fff;
+    padding: rem(10);
+
+    img {
+      max-width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: rem(20);
+    }
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      flex: 0 0 50%;
+      margin-right: rem(30);
+      &:not(:last-child) {
+        margin-bottom: rem(0);
+      }
+    }
+  }
+
+  &__content {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      margin-left: rem(30);
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: rem(32);
+    text-align: center;
+    color: #000;
+
+    &.info__title--margin {
+      margin-bottom: rem(30);
+      &:not(:last-child) {
+        margin-bottom: rem(15);
+      }
+
+      //== 992px ==//
+      @media (min-width: $tb) {
+        margin-bottom: rem(60) !important;
+      }
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        margin-bottom: rem(80) !important;
+      }
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(40);
+    }
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      font-size: rem(50);
+    }
+  }
+
+  &__logo {
+    display: block;
+    max-width: rem(360);
+    width: 100%;
+    margin: 0 auto;
+    margin-top: rem(15);
+    margin-bottom: rem(15);
+
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: rem(35);
+      margin-bottom: rem(25);
+      max-width: rem(400);
+    }
+  }
+
+  &__text {
+    font-weight: 400;
+    text-align: justify;
+    line-height: 1.3;
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(20);
+      text-align: justify;
+    }
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      font-size: rem(24);
+    }
+  }
+
+  &__button {
+    margin-top: rem(15);
+    width: 100%;
+    padding: rem(17) rem(9);
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      width: auto;
+      padding: rem(22) rem(40);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      margin-top: rem(35);
+    }
+  }
+}

@@ -1,0 +1,162 @@
+.page {
+  &__chars {
+    &:not(:last-child) {
+      margin-bottom: rem(80);
+
+      //== 1200px ==//
+      @media (min-width: $note-m) {
+        margin-bottom: rem(100);
+      }
+    }
+  }
+}
+.chars {
+  &__container {
+  }
+
+  &__body {
+    padding: rem(20) rem(15);
+    border-radius: 20px;
+    border: 5px solid #e9eaef;
+    background: #fff;
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      display: flex;
+    }
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      padding: rem(50) rem(35) rem(25) rem(50);
+    }
+  }
+
+  &__content {
+    line-height: math.div(24, 18);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      flex: 0 0 50%;
+      padding-right: rem(30);
+      margin-right: rem(45);
+      border-right: 1px solid #b6b6b6;
+    }
+  }
+
+  &__title {
+    font-weight: 400;
+    font-size: rem(36);
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(40);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(50);
+    }
+  }
+
+  &__descr {
+    font-weight: 400;
+
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(20);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(24);
+
+      &:not(:last-child) {
+        margin-bottom: rem(25);
+      }
+    }
+  }
+
+  &__button {
+    width: 100%;
+    padding: rem(17) rem(8);
+
+    //== 576px ==//
+    @media (min-width: $mb-m) {
+      width: auto;
+      padding-right: rem(25);
+      padding-left: rem(25);
+    }
+  }
+
+  &__ranges {
+    //== 768px ==//
+    @media (min-width: $mb) {
+      flex: 0 1 50%;
+    }
+  }
+
+  &__range {
+    &:not(:last-child) {
+      margin-bottom: rem(15);
+
+      //== 768px ==//
+      @media (min-width: $mb) {
+        margin-bottom: rem(35);
+      }
+      //== 1024px ==//
+      @media (min-width: $note-s) {
+        margin-bottom: rem(60);
+      }
+    }
+  }
+
+  &__range-title {
+    color: #000;
+    text-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+    font-size: rem(32);
+    line-height: math.div(60, 32);
+
+    &:not(:last-child) {
+      margin-bottom: rem(10);
+    }
+
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(40);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(50);
+    }
+  }
+
+  &__range-row {
+    display: flex;
+
+    span {
+      flex: 1 1 auto;
+      height: rem(28);
+      border-radius: 20px;
+      border: 1px solid #bba8a8;
+      background-color: #d8d5d5;
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25), 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+
+      &._filled {
+        background-color: #1792d9;
+      }
+
+      &:not(:last-child) {
+        margin-right: rem(8);
+      }
+    }
+  }
+}

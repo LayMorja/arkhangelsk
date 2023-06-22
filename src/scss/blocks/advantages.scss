@@ -1,0 +1,64 @@
+.page {
+  &__advantages {
+    margin-bottom: rem(80);
+  }
+}
+.advantages {
+  &__container {
+    //== 992px ==//
+    @media (min-width: $tb) {
+      display: flex;
+    }
+  }
+
+  &__item {
+    @extend %fl-r-ct;
+    padding: rem(15);
+    border-radius: 20px;
+    background-color: #fff;
+    box-shadow: 0px 4px 50px 0px rgba(191, 192, 212, 0.5);
+
+    &:not(:last-child) {
+      margin-bottom: rem(30);
+    }
+
+    //== 992px ==//
+    @media (min-width: $tb) {
+      flex: 1 1 auto;
+      width: calc(100% / 3 - 5px);
+      height: 100%;
+      &:not(:last-child) {
+        margin-bottom: rem(0);
+      }
+      &:not(:nth-child(3n)) {
+        margin-right: rem(20);
+      }
+    }
+  }
+
+  &__item-icon {
+    @extend %fl-a-ct;
+    flex: 0 0 rem(100);
+    border-radius: rem(20);
+    background: rgba(24, 146, 217, 0.1);
+    box-shadow: 0px 4px 50px 0px rgba(191, 192, 212, 0.5);
+    padding-top: rem(20);
+    padding-bottom: rem(20);
+
+    &:not(:last-child) {
+      margin-right: rem(10);
+    }
+  }
+
+  &__item-text {
+    font-weight: 400;
+    //== 768px ==//
+    @media (min-width: $mb) {
+      font-size: rem(20);
+    }
+    //== 1200px ==//
+    @media (min-width: $note-m) {
+      font-size: rem(24);
+    }
+  }
+}
