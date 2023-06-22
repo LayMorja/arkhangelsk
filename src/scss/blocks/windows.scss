@@ -158,7 +158,8 @@
   }
 
   &__item {
-    display: block;
+    display: flex;
+    flex-direction: column;
     padding: rem(20);
     border-radius: rem(20);
     background-color: var(--clr-white);
@@ -208,8 +209,8 @@
   }
 
   &__item-image {
-    display: block;
-    text-align: center;
+    @extend %fl-a-ct;
+    flex: 1 1 auto;
     &:not(:last-child) {
       margin-bottom: rem(20);
     }
@@ -235,11 +236,13 @@
 
     //== 768px ==//
     @media (min-width: $mb) {
-      font-size: rem(22);
+      font-size: rem(20);
+      margin: 0;
     }
     //== 992px ==//
     @media (min-width: $tb) {
       font-size: rem(30);
+      margin: 0 rem(15);
     }
   }
 }

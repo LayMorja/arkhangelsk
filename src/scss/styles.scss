@@ -26,7 +26,7 @@ $minWidth: 360;
 // Ширина полотна (макета)
 $maxWidth: 1920;
 // Ширина ограничивающего контейнера (0 = нет ограничения)
-$maxWidthContainer: 1630;
+$maxWidthContainer: 1430;
 // Общий отступ у контейнера
 // (30 = по 15px слева и справа, 0 = нет отступа)
 $containerPadding: 40;
@@ -144,3 +144,4 @@ body {
 @import 'blocks/preview';
 @import 'blocks/windows';
 @import 'blocks/types';
+@import 'blocks/systems';

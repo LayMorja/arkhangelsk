@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Домино Плюс: Пластиковые окна в квартиру и в дом</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    @@include("./html/components/_meta.html",{ "description":"", "keywords":"" })
+    @@include("./html/components/_styles-vendors.html",{})
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=64643504-6d01-4e04-958f-3de3090f8bc3&lang=ru_RU"></script>
+    <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include("./html/_header-inner.html",{})
+      <main class="page">
+        <section class="page__preview preview">
+          <div class="preview__container container">
+            <div class="preview__image">
+              <img src="@temp/preview/image-2.png" alt="" class="preview__img" />
+            </div>
+            <div class="preview__content">
+              <h1 class="preview__title">
+                <span class="_blue">Пластиковые окна</span><br />
+                в квартиру и в дом
+              </h1>
+              <p class="preview__descr">
+                Городская суета и шум не побеспокоят Вас, а в помещении всегда будет тепло и уют
+              </p>
+              <button class="preview__button btn"><span>Рассчитать стоимость</span></button>
+            </div>
+          </div>
+        </section>
+        <section class="page__windows windows">
+          <div class="windows__container container">
+            <div class="windows__header">
+              <div class="windows__header-content">
+                <h2 class="windows__title">Сегодня договор - завтра монтаж</h2>
+                <h3 class="windows__subtitle"><strong>Готовые окна</strong> в наличии на складе</h3>
+                <p class="windows__descr">(в минимальной комплектации)</p>
+              </div>
+              <div class="windows__header-button">
+                <button class="windows__button btn"><span>Уточнить у менеджера</span></button>
+              </div>
+            </div>
+            <div class="windows__body">
+              <a href="javascript:void(0);" class="windows__item">
+                <div class="windows__item-image">
+                  <img src="@temp/windows/image-1.png" alt="" class="windows__item-img" />
+                </div>
+                <div class="windows__item-link">19 000 руб.</div>
+              </a>
+              <a href="javascript:void(0);" class="windows__item">
+                <div class="windows__item-image">
+                  <img src="@temp/windows/image-3.png" alt="" class="windows__item-img" />
+                </div>
+                <div class="windows__item-link">25 300 руб.</div>
+              </a>
+              <a href="javascript:void(0);" class="windows__item">
+                <div class="windows__item-image">
+                  <img src="@temp/windows/image-4.png" alt="" class="windows__item-img" />
+                </div>
+                <div class="windows__item-link">27 100 руб.</div>
+              </a>
+            </div>
+          </div>
+        </section>
+        <section class="page__types types">
+          <div class="types__container container">
+            <h2 class="types__title"><span>Преимущества</span> пластиковых окон для города</h2>
+            <div class="types__image types__image--mobile">
+              <img src="@temp/types/image-2.png" alt="" class="types__img" />
+            </div>
+            <div class="types__content">
+              <div class="types__column">
+                <ul class="types__list">
+                  <li class="types__item">
+                    <h3 class="types__item-title">Энергоэффективность</h3>
+                    <p class="types__item-text">
+                      Пластиковые окна помогают снизить теплопотери. Это позволяет сократить расходы
+                      на отопление в дачном доме и создает комфортные условия в холодное время года
+                    </p>
+                  </li>
+                  <li class="types__item">
+                    <h3 class="types__item-title">Длительный срок службы</h3>
+                    <p class="types__item-text">
+                      Пластиковые окна обладают долговечностью и стойкостью к внешним воздействиям
+                    </p>
+                  </li>
+                  <li class="types__item">
+                    <h3 class="types__item-title">Устойчивость к погодным условиям</h3>
+                    <p class="types__item-text">
+                      Пластиковые окна не восприимчивы к дождю, ветру, ультрафиолетовому излучению,
+                      коррозии, не требуют покраски и легко моются
+                    </p>
+                  </li>
+                </ul>
+              </div>
+              <div class="types__image types__image--desktop">
+                <img src="@temp/types/image-2.png" alt="" class="types__img" />
+              </div>
+              <div class="types__column">
+                <ul class="types__list">
+                  <li class="types__item">
+                    <h3 class="types__item-title">Теплоизоляция</h3>
+                    <p class="types__item-text">
+                      Пластиковые окна могут значительно снизить проникновение холодного воздуха в
+                      помещение и удерживать тепло внутри, особенно в холодные месяцы
+                    </p>
+                  </li>
+                  <li class="types__item">
+                    <h3 class="types__item-title">Эстетичность</h3>
+                    <p class="types__item-text">
+                      Пластиковые окна позволяют выбрать окна, которые гармонично впишутся в дизайн
+                      и архитектуру дома
+                    </p>
+                  </li>
+                  <li class="types__item">
+                    <h3 class="types__item-title">Звукоизоляция</h3>
+                    <p class="types__item-text">
+                      Пластиковые окна также способны снизить проникновение внешнего шума в
+                      помещение
+                    </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+        @@include("./html/_placement-inner.html", {})
+      </main>
+      @@include("./html/_footer.html",{})
+    </div>
+    @@include("./html/_popup.html", {}) @@include("./html/components/_js-vendors.html",{})
+  </body>
+</html>

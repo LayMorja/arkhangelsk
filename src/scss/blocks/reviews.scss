@@ -109,6 +109,7 @@
   }
 
   &__icon {
+    cursor: pointer;
     overflow: hidden;
     @extend %fl-a-ct;
     width: rem(201);

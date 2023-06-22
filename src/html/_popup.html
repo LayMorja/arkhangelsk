@@ -1,12 +1,133 @@
-<div id="callback" aria-hidden="true" class="popup">
-	<div class="popup__wrapper">
-		<div class="popup__content">
-			<button data-close type="button" class="popup__close">
-				<svg>
-					<use xlink:href="@img/sprite.svg#close-popup" />
-				</svg>
-			</button>
-			<div class="popup__text"></div>
-		</div>
-	</div>
+<div id="count" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content popup__content--count">
+      <h2 class="popup__title">
+        Менеджер свяжется с вами в течении <br /><strong><i>20 минут</i></strong>
+      </h2>
+      <form action="#" class="popup__form">
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Ваше имя"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Ваш телефон"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Ваша электронная почта"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item">
+          <button type="submit" class="popup__form-button btn">
+            <span>отправить заявку</span>
+          </button>
+        </div>
+        <div class="popup__checkbox">
+          <div class="checkbox">
+            <input
+              id="c_1"
+              data-error="Ошибка"
+              class="checkbox__input"
+              type="checkbox"
+              checked
+              value="1"
+              name="form[]" />
+            <label for="c_1" class="checkbox__label"
+              ><span class="checkbox__text"
+                >Нажимая на кнопку, вы даете согласие на обработку персональных данных</span
+              ></label
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+<div id="number" aria-hidden="true" class="popup">
+  <div class="popup__wrapper">
+    <div class="popup__content popup__content--number">
+      <h2 class="popup__title">Зарегистрируйте номер на голограмме</h2>
+      <div class="popup__descr">
+        <p>
+          С победителями связываются представители компаний, где были заказаны оригинальные
+          «Серебряные окна» и выдают призы в течение <span>10 рабочих дней.</span>
+        </p>
+        <p>
+          Организатором акции
+          <span>«Закажите оригинальные «Серебряные окна» - стоимость вернем»</span> является ООО
+          «Серебряные окна»
+        </p>
+      </div>
+      <form action="#" class="popup__form">
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Ваше имя"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Ваш телефон"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Номер голограммы"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item">
+          <input
+            autocomplete="off"
+            type="text"
+            name="form[]"
+            placeholder="Адрес электронной почты"
+            class="popup__form-input" />
+        </div>
+        <div class="popup__form-item popup__form-item--textarea">
+          <textarea name="" id="" placeholder="Ваш отзыв" class="popup__form-input"></textarea>
+        </div>
+        <div class="popup__form-item popup__form-item--checkbox">
+          <button type="submit" class="popup__form-button btn">
+            <span>УЧАСТВУЮ В АКЦИИ!</span>
+          </button>
+
+          <div class="checkbox">
+            <input
+              id="c_2"
+              data-error="Ошибка"
+              class="checkbox__input"
+              type="checkbox"
+              checked
+              value="1"
+              name="form[]" />
+            <label for="c_2" class="checkbox__label"
+              ><span class="checkbox__text"
+                >Нажимая на кнопку, вы даете согласие на обработку персональных данных</span
+              ></label
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
 </div>

@@ -17,7 +17,7 @@
 
     //== 1200px ==//
     @media (min-width: $note-m) {
-      margin-top: rem(240);
+      margin-top: rem(120);
       &:not(:last-child) {
         margin-bottom: rem(10);
       }
@@ -41,8 +41,7 @@
 
     //== 1360px ==//
     @media (min-width: $note-l) {
-      margin-top: rem(-120);
-      height: rem(720);
+      height: rem(620);
     }
   }
 
@@ -97,6 +96,7 @@
   }
 
   &__descr {
+    font-weight: 400;
     max-width: rem(550);
     font-size: rem(24);
     line-height: 120%;
