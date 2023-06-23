@@ -64,6 +64,15 @@
     &:not(:last-child) {
       margin-bottom: rem(20);
     }
+
+    //== 1360px ==//
+    @media (min-width: $note-l) {
+      max-width: rem(545);
+    }
+
+    @media (min-width: $pc) {
+      transform: translateX(rem(100));
+    }
   }
 
   &__image-icon {
@@ -73,9 +82,9 @@
 
     //== 1360px ==//
     @media (min-width: $note-l) {
-      max-width: 60%;
+      max-width: 50%;
       left: -30%;
-      top: -22%;
+      top: -18%;
     }
   }
 

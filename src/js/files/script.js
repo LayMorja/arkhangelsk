@@ -90,9 +90,21 @@ function changeMap() {
 
   arkhBlock.addEventListener('click', () => {
     myMap.setCenter([64.531183, 40.539127]);
+    sevBlock.classList.contains('placement__block--current')
+      ? sevBlock.classList.remove('placement__block--current')
+      : null;
+    !arkhBlock.classList.contains('placement__block--current')
+      ? arkhBlock.classList.add('placement__block--current')
+      : null;
   });
   sevBlock.addEventListener('click', () => {
     myMap.setCenter([64.559205, 39.800509]);
+    arkhBlock.classList.contains('placement__block--current')
+      ? arkhBlock.classList.remove('placement__block--current')
+      : null;
+    !sevBlock.classList.contains('placement__block--current')
+      ? sevBlock.classList.add('placement__block--current')
+      : null;
   });
 }
 

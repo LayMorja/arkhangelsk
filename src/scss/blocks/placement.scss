@@ -91,10 +91,15 @@
     cursor: pointer;
     max-width: rem(580);
     color: var(--clr-black);
-    background-color: var(--clr-white);
+    background-color: rgba(255, 255, 255, 0.9);
     border-radius: rem(12);
     padding: rem(30) rem(20) rem(30) rem(15);
+    transition: box-shadow 0.32s ease-in-out, background-color 0.32s ease-in-out;
 
+    &.placement__block--current {
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.25);
+      background-color: var(--clr-white);
+    }
     //== 576px ==//
     @media (min-width: $mb-m) {
       display: flex;

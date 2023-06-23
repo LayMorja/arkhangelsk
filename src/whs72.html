@@ -14,7 +14,31 @@
     <div class="wrapper">
       @@include("./html/_header.html",{})
       <main class="page">
-        @@include("./html/_profile-72.html", {}) @@include("./html/_works.html")
+        @@include("./html/_profile-72.html", {})
+        <section class="page__works works">
+          <div class="works__container">
+            <h2 class="works__title title">Наши работы</h2>
+            <div class="works__slider-body">
+              <div class="works__slider">
+                <div class="works__slide">
+                  <img src="@temp/works/image-4.png" alt="" class="works__img" />
+                </div>
+                <div class="works__slide">
+                  <img src="@temp/works/image-5.png" alt="" class="works__img" />
+                </div>
+                <div class="works__slide">
+                  <img src="@temp/works/image-6.png" alt="" class="works__img" />
+                </div>
+              </div>
+            </div>
+            <div class="works__wanted container">
+              <button data-popup="#count" class="works__button btn">
+                <span>Хочу также!</span>
+              </button>
+            </div>
+          </div>
+        </section>
+
         @@include("./html/_spec-72.html") @@include("./html/_info-2.html")
         @@include("./html/_packet.html") @@include("./html/_info.html")
         @@include("./html/_advantages.html")
