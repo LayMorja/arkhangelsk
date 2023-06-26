@@ -11,7 +11,7 @@
     }
     //== 992px ==//
     @media (min-width: $tb) {
-      margin-top: rem(30);
+      margin-top: rem(120);
     }
   }
   &__hero:not(:last-child) {
@@ -61,6 +61,10 @@
 
   &__content {
     padding-right: rem(20);
+    //== 992px ==//
+    @media (min-width: $tb) {
+      margin-top: rem(40);
+    }
   }
 
   &__title {

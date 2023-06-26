@@ -5,10 +5,17 @@
   width: 100%;
   top: 0;
   left: 0;
-  &.header--home {
+  &.header--home.header--home-scrolled .header__menu {
     //== 992px ==//
     @media (min-width: $tb) {
-      display: none;
+      opacity: 0;
+    }
+  }
+  &.header--home .header__menu {
+    transition: opacity 0.32s ease-in-out;
+    //== 992px ==//
+    @media (min-width: $tb) {
+      opacity: 1;
     }
   }
   &__wrapper {

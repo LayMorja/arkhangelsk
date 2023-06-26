@@ -65,6 +65,10 @@
         display: flex;
         align-items: flex-end;
       }
+      //== 992px ==//
+      @media (min-width: $tb) {
+        align-items: center;
+      }
     }
     > ul > li:not(:last-child) {
       margin-bottom: rem(30);

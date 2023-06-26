@@ -112,3 +112,26 @@ if (document.querySelector('#map')) {
   mapInit();
   changeMap();
 }
+
+const homeHeader = function () {
+  const header = document.querySelector('header.header');
+  const homeMenu = document.querySelector('.hero__menu');
+  const windowHeight = window.innerHeight;
+  const point = homeMenu.offsetTop + homeMenu.offsetHeight / 2;
+
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > point) {
+      header.classList.contains('header--home-scrolled')
+        ? header.classList.remove('header--home-scrolled')
+        : null;
+    } else {
+      !header.classList.contains('header--home-scrolled')
+        ? header.classList.add('header--home-scrolled')
+        : null;
+    }
+  });
+};
+
+if (document.querySelector('.hero__menu')) {
+  homeHeader();
+}
