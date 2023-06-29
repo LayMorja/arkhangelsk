@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <title>Домино Плюс: Пластиковые окна в квартиру и в дом</title>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    @@include("./html/components/_meta.html",{ "description":"", "keywords":"" })
+    @@include("./html/components/_styles-vendors.html",{})
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=64643504-6d01-4e04-958f-3de3090f8bc3&lang=ru_RU"></script>
+    <link rel="shortcut icon" href="@resources/favicon.ico" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  </head>
+  <body>
+    <div class="wrapper">
+      @@include("./html/_header-inner.html",{})
+      <main class="page">
+        <section class="page__preview preview">
+          <div class="preview__container container">
+            <div class="preview__image">
+              <img src="@temp/preview/image-3.png" alt="" class="preview__img" />
+            </div>
+            <div class="preview__content">
+              <h1 class="preview__title">
+                <span class="_blue">Инструкции</span> по установке пластиковых окон
+              </h1>
+              <p class="preview__descr">
+                Планируете устанавливать пластиковые окна своими силами? Мы Вам поможем. Прочтите
+                эти полезные инструкции.
+              </p>
+            </div>
+          </div>
+        </section>
+        <section class="page__instruction instruction">
+          <div class="instruction__container container">
+            <ul class="instruction__list">
+              <li class="instruction__item">
+                <span>Как снять размеры для заказа окна?</span>
+                <a
+                  href="javascript:void(0);"
+                  title="Скачать инструкцию"
+                  class="instruction__download">
+                  <img src="" alt="" aria-hidden="true" class="instruction__icon" />
+                </a>
+              </li>
+              <li class="instruction__item">
+                <span>Как установить оконный блок?</span>
+                <a
+                  href="javascript:void(0);"
+                  title="Скачать инструкцию"
+                  class="instruction__download">
+                  <img src="" alt="" aria-hidden="true" class="instruction__icon" />
+                </a>
+              </li>
+              <li class="instruction__item">
+                <span>Как установить москитную сетку на окно?</span>
+                <a
+                  href="javascript:void(0);"
+                  title="Скачать инструкцию"
+                  class="instruction__download">
+                  <img src="" alt="" aria-hidden="true" class="instruction__icon" />
+                </a>
+              </li>
+            </ul>
+            <h2 class="instruction__title">
+              Если Вы все же хотите доверить установку пластиковых окон профессионалам, то мы
+              гарантируем Вам результат
+            </h2>
+          </div>
+        </section>
+        @@include("./html/_placement-inner.html", {})
+      </main>
+      @@include("./html/_footer.html",{})
+    </div>
+    @@include("./html/_popup.html", {}) @@include("./html/components/_js-vendors.html",{})
+  </body>
+</html>

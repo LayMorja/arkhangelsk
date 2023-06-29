@@ -33,6 +33,8 @@ $('.works__slider').slick({
 
 let myMap;
 function mapInit() {
+  if (!ymaps) throw new Error('Карты не инициализированы');
+
   const viewerCb = function (entries, observer) {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
@@ -109,8 +111,12 @@ function changeMap() {
 }
 
 if (document.querySelector('#map')) {
-  mapInit();
-  changeMap();
+  try {
+    mapInit();
+    changeMap();
+  } catch (e) {
+    console.error(`Something got wrong, ${e.message}`);
+  }
 }
 
 const homeHeader = function () {
